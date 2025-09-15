@@ -1,18 +1,28 @@
+/* Reset defaults */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Wrapper fills viewport height */
 .wrapper {
   display: flex;
-  align-items: stretch; /* stretch children vertically */
+  align-items: stretch;
   min-height: 100vh;
 }
 
 /* Sidebar base */
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  width: 250px;
   background: #343a40; /* dark sidebar background */
   color: white;
-  transition: all 0.3s;
-  position: fixed; /* fixed sidebar on left */
+  transition: all 0.3s ease;
+  position: fixed;
   height: 100vh;
   overflow-y: auto;
   left: 0;
@@ -20,19 +30,20 @@
   bottom: 0;
   z-index: 999;
   padding-top: 20px;
+  margin-left: 0; /* visible by default */
 }
 
 /* Sidebar hidden when toggled */
 #sidebar.active {
-  margin-left: -250px; /* slide left to hide */
+  margin-left: -250px;
 }
 
 /* Content area next to sidebar */
 #content {
   width: 100%;
   padding: 20px;
-  margin-left: 100px; /* leave room for sidebar */
-  transition: all 0.3s;
+  margin-left: 250px;
+  transition: all 0.3s ease;
 }
 
 /* Content expands when sidebar hidden */
@@ -43,6 +54,7 @@
 /* Sidebar links style */
 #sidebar ul.components {
   padding-left: 0;
+  margin: 0;
 }
 
 #sidebar ul.components li a {
@@ -58,12 +70,48 @@
 }
 
 /* Sidebar header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .sidebar-header h4 a {
   color: white;
   text-decoration: none;
+  margin: 0;
 }
 
-/* Adjustments for toggle button */
+/* Toggle button styles */
 #sidebarCollapse {
-  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
+  background: #ffffff;
+  color: #343a40;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 1001;
+}
+
+/* Show toggle button always (or adapt via classes) */
+#sidebarCollapse {
+  display: block;
+}
+
+/* Responsive: small screens */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px; /* hidden by default on small screen */
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    margin-left: 0;
+  }
+  #content.active {
+    margin-left: 250px;
+  }
 }
