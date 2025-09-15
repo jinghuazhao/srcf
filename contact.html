@@ -3,21 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>Contact – Jing Hua Zhao</title>
+
+  <!-- Main site CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Font Awesome -->
+  <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
+
+  <!-- (Optional) Bootstrap if used elsewhere -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
 </head>
 <body>
   <div class="wrapper">
     <div id="template-header"></div>
+
     <div id="content">
       <h1>Contact</h1>
       <p>Email: <a href="mailto:jinghuazhao@hotmail.com">jinghuazhao@hotmail.com</a></p>
       <p><a href="references.txt">References</a> | <a href="https://tinyurl.com/yxh3ycwg">Google Scholar</a></p>
     </div>
   </div>
+
+  <!-- ✅ Dynamically load the sidebar header -->
   <script>
-    fetch('header.html').then(res => res.text()).then(data => {
-      document.getElementById('template-header').innerHTML = data;
-    });
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('template-header').innerHTML = data;
+      });
   </script>
 </body>
 </html>
