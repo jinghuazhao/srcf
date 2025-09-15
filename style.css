@@ -1,7 +1,5 @@
 /* Wrapper fills viewport height */
 .wrapper {
-  display: flex;
-  align-items: stretch; /* stretch children vertically */
   min-height: 100vh;
 }
 
@@ -29,15 +27,16 @@
 
 /* Content area next to sidebar */
 #content {
-  width: 100%;
-  padding: 20px;
+  width: calc(100% - 250px);
   margin-left: 250px; /* leave room for sidebar */
+  padding: 20px;
   transition: all 0.3s;
 }
 
 /* Content expands when sidebar hidden */
 #content.active {
   margin-left: 0;
+  width: 100%;
 }
 
 /* Sidebar links style */
