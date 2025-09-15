@@ -1,17 +1,26 @@
-/* Improve sidebar menu spacing */
-nav ul.components li.nav-item {
-  margin-bottom: 15px;
+/* ensure wrapper is flex (or grid), so sidebar and content sit side by side */
+.wrapper {
+  display: flex;
+  /* optional: ensure full height or minimal height if needed */
 }
 
-/* Optional: hover effect for links */
-nav ul.components li.nav-item a:hover {
-  color: #007bff;
-  text-decoration: none;
+/* sidebar rules */
+#sidebar {
+  width: 250px; /* or whatever width you want */
+  /* fix to left */
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* optional background, padding, overflow etc. */
+  padding: 20px;
+  /* ensure it's on top of content if overlapping possible */
+  z-index: 1000;
 }
 
-/* Ensure sidebar uses correct font and size */
-nav ul.components li.nav-item a {
-  display: block;
-  padding: 8px 12px;
-  font-size: 16px;
+/* content area rules so content leaves space for fixed sidebar */
+#content {
+  margin-left: 250px; /* same as sidebar width, so content doesn’t go under sidebar */
+  padding: 20px; /* optional */
+  flex: 1; /* so it fills remaining space */
 }
