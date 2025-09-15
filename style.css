@@ -66,3 +66,25 @@
 #sidebarCollapse {
   margin-right: 10px;
 }
+
+/* Prevent top margin collapse from first content section */
+#content {
+  overflow: hidden;
+}
+
+/* Remove top margin on the first section (e.g., the banner) */
+#content > section:first-of-type {
+  margin-top: 0;
+  padding-top: 10px; /* Optional: add some spacing if needed */
+}
+
+/* Basic reset for unwanted default spacing */
+body, h1, h2, h3, h4, h5, h6, p, figure, section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: consistent spacing between sections */
+section {
+  margin-bottom: 30px;
+}
