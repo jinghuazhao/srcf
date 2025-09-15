@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About – Jing Hua Zhao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="template-header"></div>
+    <div id="content">
+      <h1>About Me</h1>
+      <p>I am a scientist at the <a href="https://www.phpc.cam.ac.uk/staff/dr-jing-hua-zhao">Cardiovascular Epidemiology Unit</a>...</p>
+    </div>
+  </div>
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('template-header').innerHTML = data;
+    });
+  </script>
+</body>
+</html>

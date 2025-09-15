@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact – Jing Hua Zhao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="template-header"></div>
+    <div id="content">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:jinghuazhao@hotmail.com">jinghuazhao@hotmail.com</a></p>
+      <p><a href="references.txt">References</a> | <a href="https://tinyurl.com/yxh3ycwg">Google Scholar</a></p>
+    </div>
+  </div>
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('template-header').innerHTML = data;
+    });
+  </script>
+</body>
+</html>

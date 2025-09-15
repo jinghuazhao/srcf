@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Work – Jing Hua Zhao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="template-header"></div>
+    <div id="content">
+      <h1>Work</h1>
+      <p>Projects, consortia, publications, and more...</p>
+    </div>
+  </div>
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('template-header').innerHTML = data;
+    });
+  </script>
+</body>
+</html>

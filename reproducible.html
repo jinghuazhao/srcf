@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Reproducible Research – Jing Hua Zhao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="template-header"></div>
+    <div id="content">
+      <h1>Reproducible Research</h1>
+      <p>Details about tools, code, tutorials, and conferences...</p>
+    </div>
+  </div>
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('template-header').innerHTML = data;
+    });
+  </script>
+</body>
+</html>
