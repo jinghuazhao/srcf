@@ -11,35 +11,46 @@
     <div id="template-header"></div>
     <div id="content">
       <section class="jumbotron text-center" id="banner">
-        <figure><img src="name.jpg" alt="title image" /><figcaption>Personal page of Jing Hua Zhao</figcaption></figure>
+        <figure>
+          <img src="name.jpg" alt="title image" />
+          <figcaption>Personal page of Jing Hua Zhao</figcaption>
+        </figure>
         <p class="lead text-muted">Statistics, Genetics, Epidemiology, Public Health</p>
       </section>
+
       <section id="about">
         <h3>About</h3>
         <p>Brief intro... <a href="about.html">Read more →</a></p>
       </section>
+
       <section id="work">
         <h3>Work</h3>
         <p>Genetic epidemiology, SCALLOP, GWAS... <a href="work.html">Read more →</a></p>
       </section>
+
       <section id="reproducibleresearch">
         <h3>Reproducible Research</h3>
         <p>useR! conferences, tools, software... <a href="reproducible.html">Read more →</a></p>
       </section>
+
       <section id="colleaguesmentors">
         <h3>Colleagues & Mentors</h3>
         <p>Academic collaborators... <a href="colleagues.html">Read more →</a></p>
       </section>
+
       <section id="contact">
         <h3>Contact</h3>
         <p><a href="contact.html">Contact page →</a></p>
       </section>
     </div>
   </div>
+
   <script>
-    fetch('header.html').then(res => res.text()).then(data => {
-      document.getElementById('template-header').innerHTML = data;
-    });
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('template-header').innerHTML = data;
+      });
   </script>
 </body>
 </html>
