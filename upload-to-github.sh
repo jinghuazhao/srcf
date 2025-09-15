@@ -15,6 +15,7 @@ fi
 
 # File list — including this script itself
 FILES=(
+  "name.jpg"
   "index.html"
   "about.html"
   "work.html"
