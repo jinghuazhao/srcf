@@ -1,94 +1,17 @@
-/* style.css */
-
-/* Layout */
-.wrapper {
-    display: flex;
-    align-items: stretch;
+/* Improve sidebar menu spacing */
+nav ul.components li.nav-item {
+  margin-bottom: 15px;
 }
 
-/* Sidebar */
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background: #343a40;
-    color: #fff;
-    transition: all 0.3s;
+/* Optional: hover effect for links */
+nav ul.components li.nav-item a:hover {
+  color: #007bff;
+  text-decoration: none;
 }
 
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #3c4248;
-    text-align: center;
-}
-
-#sidebar ul.components {
-    padding: 0;
-    margin: 0;
-}
-
-#sidebar ul li {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a {
-    color: #ddd;
-    display: block;
-    text-decoration: none;
-}
-
-#sidebar ul li a:hover {
-    background: #575d63;
-    color: #fff;
-    text-decoration: none;
-}
-
-#sidebar ul li.active > a {
-    background: #007bff;
-    color: white;
-}
-
-/* Content area */
-#content {
-    width: 100%;
-    padding: 20px;
-    transition: all 0.3s;
-}
-
-/* Collapse sidebar */
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#content.active {
-    margin-left: 0;
-}
-
-/* Toggle Button */
-#sidebarCollapse {
-    margin-left: 10px;
-}
-
-/* Banner / Jumbotron */
-#banner {
-    background-color: white;
-    height: auto;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    border: 1px solid #dee2e6;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #content {
-        width: 100%;
-        padding: 20px;
-    }
+/* Ensure sidebar uses correct font and size */
+nav ul.components li.nav-item a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 16px;
 }
