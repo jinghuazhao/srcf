@@ -1,26 +1,69 @@
-/* ensure wrapper is flex (or grid), so sidebar and content sit side by side */
+/* Wrapper fills viewport height */
 .wrapper {
   display: flex;
-  /* optional: ensure full height or minimal height if needed */
+  align-items: stretch; /* stretch children vertically */
+  min-height: 100vh;
 }
 
-/* sidebar rules */
+/* Sidebar base */
 #sidebar {
-  width: 250px; /* or whatever width you want */
-  /* fix to left */
-  position: fixed;
+  min-width: 250px;
+  max-width: 250px;
+  background: #343a40; /* dark sidebar background */
+  color: white;
+  transition: all 0.3s;
+  position: fixed; /* fixed sidebar on left */
+  height: 100vh;
+  overflow-y: auto;
   left: 0;
   top: 0;
   bottom: 0;
-  /* optional background, padding, overflow etc. */
-  padding: 20px;
-  /* ensure it's on top of content if overlapping possible */
-  z-index: 1000;
+  z-index: 999;
+  padding-top: 20px;
 }
 
-/* content area rules so content leaves space for fixed sidebar */
+/* Sidebar hidden when toggled */
+#sidebar.active {
+  margin-left: -250px; /* slide left to hide */
+}
+
+/* Content area next to sidebar */
 #content {
-  margin-left: 250px; /* same as sidebar width, so content doesn’t go under sidebar */
-  padding: 20px; /* optional */
-  flex: 1; /* so it fills remaining space */
+  width: 100%;
+  padding: 20px;
+  margin-left: 250px; /* leave room for sidebar */
+  transition: all 0.3s;
+}
+
+/* Content expands when sidebar hidden */
+#content.active {
+  margin-left: 0;
+}
+
+/* Sidebar links style */
+#sidebar ul.components {
+  padding-left: 0;
+}
+
+#sidebar ul.components li a {
+  padding: 10px 20px;
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+}
+
+#sidebar ul.components li a:hover {
+  background: #495057;
+  color: white;
+}
+
+/* Sidebar header */
+.sidebar-header h4 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Adjustments for toggle button */
+#sidebarCollapse {
+  margin-right: 10px;
 }
