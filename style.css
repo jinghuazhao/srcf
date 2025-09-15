@@ -1,42 +1,39 @@
 /* Wrapper fills viewport height */
 .wrapper {
   min-height: 100vh;
-  /* no flex here, keeping your original layout */
 }
 
 /* Sidebar base */
 #sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  background: #343a40;
+  min-width: 250px;
+  max-width: 250px;
+  background: #343a40; /* dark sidebar background */
   color: white;
-  padding-top: 20px;
-  overflow-y: auto;
   transition: all 0.3s;
+  position: fixed; /* fixed sidebar on left */
+  height: 100vh;
+  overflow-y: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
   z-index: 999;
+  padding-top: 20px;
 }
 
 /* Sidebar hidden when toggled */
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: -250px; /* slide left to hide */
 }
 
-/* Content area */
+/* Content area next to sidebar */
 #content {
-  margin-left: 250px; /* leave room for fixed sidebar */
-  padding: 20px;
   width: calc(100% - 250px);
+  margin-left: 250px; /* leave room for sidebar */
+  padding: 20px;
   transition: all 0.3s;
-  box-sizing: border-box;
-
-  /* Prevents top margin collapse from first child */
-  overflow: hidden;
 }
 
-/* When sidebar is hidden */
+/* Content expands when sidebar hidden */
 #content.active {
   margin-left: 0;
   width: 100%;
@@ -65,24 +62,7 @@
   text-decoration: none;
 }
 
-/* Toggle button */
+/* Adjustments for toggle button */
 #sidebarCollapse {
   margin-right: 10px;
-}
-
-/* ✅ Fix excessive spacing at top of content */
-#content > section:first-of-type {
-  margin-top: 0; /* remove default spacing */
-  padding-top: 10px; /* optional – keep a small buffer */
-}
-
-/* ✅ Basic reset to remove unwanted browser margin/padding */
-body, h1, h2, h3, h4, h5, h6, p, figure {
-  margin: 0;
-  padding: 0;
-}
-
-/* Optional spacing below sections */
-section {
-  margin-bottom: 30px;
 }
