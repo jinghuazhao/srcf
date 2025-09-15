@@ -31,7 +31,7 @@
 #content {
   width: 100%;
   padding: 20px;
-  margin-left: 250px; /* leave room for sidebar */
+  margin-left: 100px; /* leave room for sidebar */
   transition: all 0.3s;
 }
 
