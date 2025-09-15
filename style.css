@@ -1,7 +1,7 @@
 /* Wrapper fills viewport height */
 .wrapper {
   min-height: 100vh;
-  /* no flex here */
+  /* no flex here, keeping your original layout */
 }
 
 /* Sidebar base */
@@ -31,6 +31,9 @@
   width: calc(100% - 250px);
   transition: all 0.3s;
   box-sizing: border-box;
+
+  /* Prevents top margin collapse from first child */
+  overflow: hidden;
 }
 
 /* When sidebar is hidden */
@@ -65,4 +68,21 @@
 /* Toggle button */
 #sidebarCollapse {
   margin-right: 10px;
+}
+
+/* ✅ Fix excessive spacing at top of content */
+#content > section:first-of-type {
+  margin-top: 0; /* remove default spacing */
+  padding-top: 10px; /* optional – keep a small buffer */
+}
+
+/* ✅ Basic reset to remove unwanted browser margin/padding */
+body, h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional spacing below sections */
+section {
+  margin-bottom: 30px;
 }
