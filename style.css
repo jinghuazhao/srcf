@@ -1,39 +1,39 @@
 /* Wrapper fills viewport height */
 .wrapper {
   min-height: 100vh;
+  /* no flex here */
 }
 
 /* Sidebar base */
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: #343a40; /* dark sidebar background */
-  color: white;
-  transition: all 0.3s;
-  position: fixed; /* fixed sidebar on left */
-  height: 100vh;
-  overflow-y: auto;
-  left: 0;
+  position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
-  z-index: 999;
+  width: 250px;
+  background: #343a40;
+  color: white;
   padding-top: 20px;
+  overflow-y: auto;
+  transition: all 0.3s;
+  z-index: 999;
 }
 
 /* Sidebar hidden when toggled */
 #sidebar.active {
-  margin-left: -250px; /* slide left to hide */
+  margin-left: -250px;
 }
 
-/* Content area next to sidebar */
+/* Content area */
 #content {
-  width: calc(100% - 250px);
-  margin-left: 250px; /* leave room for sidebar */
+  margin-left: 250px; /* leave room for fixed sidebar */
   padding: 20px;
+  width: calc(100% - 250px);
   transition: all 0.3s;
+  box-sizing: border-box;
 }
 
-/* Content expands when sidebar hidden */
+/* When sidebar is hidden */
 #content.active {
   margin-left: 0;
   width: 100%;
@@ -62,7 +62,7 @@
   text-decoration: none;
 }
 
-/* Adjustments for toggle button */
+/* Toggle button */
 #sidebarCollapse {
   margin-right: 10px;
 }
