@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Reproducible Research – Jing Hua Zhao</title>
-
-  <!-- Your site CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
-
-  <!-- ✅ Font Awesome for sidebar icons -->
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
-
-  <!-- (Optional) Bootstrap CSS if used elsewhere -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
 </head>
 <body>
   <div class="wrapper">
     <div id="template-header"></div>
-
     <div id="content">
       <h1>Reproducible Research</h1>
       <p>Details about tools, code, tutorials, and conferences...</p>
     </div>
   </div>
 
-  <!-- Inject header.html dynamically -->
   <script>
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('template-header').innerHTML = data;
+
+        const sidebarToggle = document.getElementById('sidebarCollapse');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        if (sidebarToggle && sidebar && content) {
+          sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+          });
+        }
       });
   </script>
 </body>
