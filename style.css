@@ -1,5 +1,7 @@
 /* Wrapper fills viewport height */
 .wrapper {
+  display: flex;
+  align-items: stretch; /* stretch children vertically */
   min-height: 100vh;
 }
 
@@ -27,16 +29,15 @@
 
 /* Content area next to sidebar */
 #content {
-  width: calc(100% - 250px);
-  margin-left: 250px; /* leave room for sidebar */
+  width: 100%;
   padding: 20px;
+  margin-left: 250px; /* leave room for sidebar */
   transition: all 0.3s;
 }
 
 /* Content expands when sidebar hidden */
 #content.active {
   margin-left: 0;
-  width: 100%;
 }
 
 /* Sidebar links style */
@@ -65,26 +66,4 @@
 /* Adjustments for toggle button */
 #sidebarCollapse {
   margin-right: 10px;
-}
-
-/* Prevent top margin collapse from first content section */
-#content {
-  overflow: hidden;
-}
-
-/* Remove top margin on the first section (e.g., the banner) */
-#content > section:first-of-type {
-  margin-top: 0;
-  padding-top: 10px; /* Optional: add some spacing if needed */
-}
-
-/* Basic reset for unwanted default spacing */
-body, h1, h2, h3, h4, h5, h6, p, figure, section {
-  margin: 0;
-  padding: 0;
-}
-
-/* Optional: consistent spacing between sections */
-section {
-  margin-bottom: 30px;
 }
