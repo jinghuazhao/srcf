@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Contact – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
@@ -11,9 +15,24 @@
   <div class="wrapper">
     <div id="template-header"></div>
     <div id="content">
-      <h1>Contact</h1>
-      <p>Email: <a href="mailto:jinghuazhao@hotmail.com">jinghuazhao@hotmail.com</a></p>
-      <p><a href="references.txt">References</a> | <a href="https://tinyurl.com/yxh3ycwg">Google Scholar</a></p>
+      <section class="container mt-4">
+        <h1>Contact</h1>
+
+        <p>
+          Email:
+          <a href="mailto:jinghuazhao@hotmail.com">jinghuazhao@hotmail.com</a>
+        </p>
+
+        <p>
+          <a href="references.txt">References</a> |
+          <a href="https://tinyurl.com/yxh3ycwg" target="_blank" rel="noopener">Google Scholar</a>
+        </p>
+
+        <p>
+          For collaborations or professional inquiries, feel free to reach out by email. I'm open to discussions
+          related to genetic epidemiology, reproducible research, and statistical software development.
+        </p>
+      </section>
     </div>
   </div>
 
@@ -31,9 +50,11 @@
           sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed');
           });
         }
       });
   </script>
 </body>
 </html>
+
