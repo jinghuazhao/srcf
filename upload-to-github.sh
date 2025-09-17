@@ -33,7 +33,7 @@ for file in "${FILES[@]}"; do
   if [ -f "$file" ]; then
     echo "Adding and committing $file..."
     git add "$file"
-    git commit -m "Add $file"
+    git commit -m "$file"
   else
     echo "Warning: $file not found!"
   fi
