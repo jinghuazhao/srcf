@@ -64,9 +64,11 @@
           sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed'); // toggle button position
           });
         }
       });
   </script>
 </body>
 </html>
+
