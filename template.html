@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Title – Jing Hua Zhao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brief page description for SEO.">
+  <meta name="author" content="Jing Hua Zhao">
+  <meta property="og:title" content="Page Title – Jing Hua Zhao">
+  <meta property="og:description" content="Brief summary for social previews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/page.html"> <!-- Replace as needed -->
+  <meta property="og:image" content="https://yourdomain.com/name.jpg"> <!-- Replace if available -->
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="template-header"></div>
+    <div id="content">
+      <section class="container mt-4">
+        <h1>Page Title</h1>
+        <p>This is your new page content.</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('template-header').innerHTML = data;
+
+        const sidebarToggle = document.getElementById('sidebarCollapse');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        if (sidebarToggle && sidebar && content) {
+          sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed');
+          });
+        }
+      });
+  </script>
+</body>
+</html>
+
