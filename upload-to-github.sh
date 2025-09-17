@@ -24,6 +24,7 @@ FILES=(
   "reproducible.html"
   "header.html"
   "style.css"
+  "template.html"
   "upload-to-github.sh"   # ✅ Include this script
 )
 
