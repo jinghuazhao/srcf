@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>About – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
@@ -11,13 +15,26 @@
   <div class="wrapper">
     <div id="template-header"></div>
     <div id="content">
-      <h1>About Me</h1>
-      <p>
-        I am a scientist at the
-        <a href="https://www.phpc.cam.ac.uk/staff/dr-jing-hua-zhao">
-          Cardiovascular Epidemiology Unit
-        </a>...
-      </p>
+      <section class="container mt-4">
+        <h1>About Me</h1>
+        <p>
+          I am a scientist at the
+          <a href="https://www.phpc.cam.ac.uk/staff/dr-jing-hua-zhao" target="_blank" rel="noopener">
+            Cardiovascular Epidemiology Unit
+          </a>
+          at the University of Cambridge. My research spans the fields of statistical genetics,
+          epidemiology, and public health.
+        </p>
+        <p>
+          My work involves large-scale genomic studies (GWAS), data integration, and developing reproducible
+          workflows in R. I am actively involved in initiatives like <strong>SCALLOP</strong> and participate in
+          open-source software development.
+        </p>
+        <p>
+          I also regularly contribute to conferences and communities such as <code>useR!</code>,
+          promoting transparent and reproducible science.
+        </p>
+      </section>
     </div>
   </div>
 
@@ -35,9 +52,11 @@
           sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed');
           });
         }
       });
   </script>
 </body>
 </html>
+
