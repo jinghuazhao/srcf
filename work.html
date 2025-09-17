@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Work – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
@@ -11,8 +15,36 @@
   <div class="wrapper">
     <div id="template-header"></div>
     <div id="content">
-      <h1>Work</h1>
-      <p>Projects, consortia, publications, and more...</p>
+      <section class="container mt-4">
+        <h1>Work</h1>
+        <p>
+          My research encompasses a wide range of interdisciplinary efforts at the intersection of genetics,
+          statistics, and epidemiology. I contribute to major international collaborations and lead multiple
+          projects in genetic epidemiology.
+        </p>
+
+        <h2>Current Focus</h2>
+        <ul>
+          <li>Genome-Wide Association Studies (GWAS)</li>
+          <li>Multi-omics data integration</li>
+          <li>Statistical methods in complex trait analysis</li>
+        </ul>
+
+        <h2>Consortia & Projects</h2>
+        <ul>
+          <li><strong>SCALLOP</strong> – Systematic and Combined AnaLysis of Olink Proteins</li>
+          <li><strong>UK Biobank</strong> – Large-scale cohort analysis</li>
+          <li><strong>INTERVAL</strong> – Genomics of blood donors</li>
+        </ul>
+
+        <h2>Publications</h2>
+        <p>
+          A list of selected publications can be found on my
+          <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Jing+Hua+Zhao" target="_blank" rel="noopener">
+            PubMed profile
+          </a>.
+        </p>
+      </section>
     </div>
   </div>
 
@@ -30,9 +62,11 @@
           sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed');
           });
         }
       });
   </script>
 </body>
 </html>
+
