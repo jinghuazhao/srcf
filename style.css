@@ -71,10 +71,12 @@ html, body {
 
 /* Sidebar header */
 .sidebar-header {
+  position: relative; /* needed for absolute positioning */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Home link on left */
   align-items: center;
   padding: 0 20px;
+  height: 50px;
 }
 
 .sidebar-header h4 a {
@@ -85,17 +87,31 @@ html, body {
 
 /* Toggle button styles */
 #sidebarCollapse {
-  margin-left: 10px;
-  border: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   background: #ffffff;
   color: #343a40;
+  border: none;
   font-size: 1.25rem;
   cursor: pointer;
   padding: 5px 10px;
   z-index: 1001;
+  transition: left 0.3s ease, right 0.3s ease;
 }
 
-/* Show toggle button always (or adapt via classes) */
+/* When sidebar is hidden, move toggle button to fixed position on left top */
+#sidebarCollapse.collapsed {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  right: auto;
+  transform: none;
+  z-index: 1100;
+}
+
+/* Show toggle button always */
 #sidebarCollapse {
   display: block;
 }
@@ -115,3 +131,4 @@ html, body {
     margin-left: 250px;
   }
 }
+
