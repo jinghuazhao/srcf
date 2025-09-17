@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Colleagues & Mentors – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
@@ -11,8 +15,34 @@
   <div class="wrapper">
     <div id="template-header"></div>
     <div id="content">
-      <h1>Colleagues & Mentors</h1>
-      <p>Full list of collaborators and mentors...</p>
+      <section class="container mt-4">
+        <h1>Colleagues & Mentors</h1>
+        <p>
+          Throughout my career, I have had the privilege of collaborating with outstanding researchers and being
+          mentored by leading scientists in the fields of genetics, epidemiology, and biostatistics.
+        </p>
+
+        <h2>Current Collaborators</h2>
+        <ul>
+          <li>Researchers in the SCALLOP consortium</li>
+          <li>Colleagues at the MRC Epidemiology Unit, University of Cambridge</li>
+          <li>Collaborators from international cohorts (UK Biobank, INTERVAL, etc.)</li>
+        </ul>
+
+        <h2>Past & Present Mentors</h2>
+        <ul>
+          <li>Prof. John Danesh</li>
+          <li>Prof. Paul Elliott</li>
+          <li>Dr. Folkert Asselbergs</li>
+        </ul>
+
+        <h2>Academic Collaborations</h2>
+        <p>
+          My collaborations span academic, clinical, and industry partners across Europe, the US, and Asia.
+          These partnerships have enabled the development of robust statistical frameworks and the integration
+          of multi-omics data in population studies.
+        </p>
+      </section>
     </div>
   </div>
 
@@ -30,9 +60,11 @@
           sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
+            sidebarToggle.classList.toggle('collapsed');
           });
         }
       });
   </script>
 </body>
 </html>
+
