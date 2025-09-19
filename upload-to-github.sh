@@ -17,13 +17,14 @@ fi
 FILES=(
   "name.jpg"
   "index.html"
+  "header.html"
   "about.html"
   "work.html"
   "contact.html"
   "colleagues.html"
   "reproducible.html"
-  "header.html"
   "style.css"
+  "references.txt"
   "template.html"
   "upload-to-github.sh"   # ✅ Include this script
 )
