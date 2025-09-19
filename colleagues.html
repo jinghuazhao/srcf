@@ -12,59 +12,92 @@
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <div id="template-header"></div>
-    <div id="content">
-      <section class="container mt-4">
-        <h1>Colleagues & Mentors</h1>
-        <p>
-          Throughout my career, I have had the privilege of collaborating with outstanding researchers and being
-          mentored by leading scientists in the fields of genetics, epidemiology, and biostatistics.
-        </p>
+<div class="wrapper">
+  <div id="template-header"></div>
 
-        <h2>Current Collaborators</h2>
-        <ul>
-          <li>Researchers in the SCALLOP consortium</li>
-          <li>Colleagues at the MRC Epidemiology Unit, University of Cambridge</li>
-          <li>Collaborators from international cohorts (UK Biobank, INTERVAL, etc.)</li>
-        </ul>
+  <div id="content">
+    <section class="container mt-4">
+      <h1>Colleagues and Mentors</h1>
+      <p>
+        The following list reflects some of the colleagues, collaborators, and mentors I've been fortunate to work with over the years, 
+across institutions and research fields.
+      </p>
 
-        <h2>Past & Present Mentors</h2>
-        <ul>
-          <li>Prof. John Danesh</li>
-          <li>Prof. Paul Elliott</li>
-          <li>Dr. Folkert Asselbergs</li>
-        </ul>
+      <p>
+        <strong>Beijing University:</strong> 
+        <a href="http://finance.sina.com.cn/economist/jingjixueren/20051219/11492209756.shtml">Yude Chen</a> 
+        (<a href="http://sph.pku.edu.cn/">School of Public Health</a>)<br>
 
-        <h2>Academic Collaborations</h2>
-        <p>
-          My collaborations span academic, clinical, and industry partners across Europe, the US, and Asia.
-          These partnerships have enabled the development of robust statistical frameworks and the integration
-          of multi-omics data in population studies.
-        </p>
-      </section>
-    </div>
+        <strong>Fudan University:</strong> 
+        <a href="http://baike.baidu.com/view/1400594.htm">Pihuan Jin</a>, 
+        <a href="http://baike.baidu.com/view/1402216.html">Fumin Shen</a>, 
+        <a href="http://baike.baidu.com/view/1405060.htm">Zhaohuan Zhang</a> 
+        (<a href="http://en.wikipedia.org/wiki/Zhang_Zhaohuan">Wiki Entry</a>)<br>
+
+        <strong>Harvard School of Public Health:</strong> 
+        <a href="http://www.hsph.harvard.edu/faculty/david-christiani/">David Christiani</a>, 
+        <a href="http://www.hsph.harvard.edu/faculty/william-hsiao/">William Hsiao</a> 
+        (<a href="http://en.wikipedia.org/wiki/William_Hsiao">Wiki Entry</a>), 
+        <a href="http://www.hsph.harvard.edu/faculty/nan-laird/">Nan Laird</a> 
+        (<a href="http://en.wikipedia.org/wiki/Nan_Laird">Wiki Entry</a>)<br>
+
+        <strong>Kings College London:</strong> 
+        <a href="https://kclpure.kcl.ac.uk/portal/david.collier.html">David Collier</a>, 
+        <a href="https://kclpure.kcl.ac.uk/portal/en/persons/tao-li(279830ab-410a-4150-a30a-e3a56dad93aa).html">Tao Li</a>, 
+        <a href="https://www.kcl.ac.uk/ioppn/depts/sgdp-centre/about/history/mcguffintribute.aspx">Peter McGuffin</a> 
+        (<a href="https://en.wikipedia.org/wiki/Peter_McGuffin">Wiki Entry</a>), 
+        <a href="https://kclpure.kcl.ac.uk/portal/en/persons/robin-murray(0875bc32-9bb1-47b3-90c2-5783969e5ce5)/biography.html">Robin 
+Murray</a> 
+        (<a href="https://en.wikipedia.org/wiki/Robin_Murray">Wiki Entry</a>)<br>
+
+        <strong>Max Planck–CAS Paul Gerson Unna Research Group on Dermatogenomics:</strong> 
+        <a href="http://www.picb.ac.cn/picb-dynamic/dermatogenomics/index.jsp?ntype=3">Sijia Wang</a><br>
+
+        <strong>National Institute of Health:</strong> 
+        <a href="https://www.niaaa.nih.gov/dnb">Abbas Parsian</a><br>
+
+        <strong>Shandong University:</strong> 
+        <a href="http://biostat.sdu.edu.cn/">Biostatistics</a><br>
+
+        <strong>University College London:</strong> 
+        <a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=SEHUM16">Steve Humphries</a>, 
+        <a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=MGMAR64">Michael Marmot</a> 
+        (<a href="http://en.wikipedia.org/wiki/Michael_Marmot">Wiki Entry</a>), 
+        <a href="http://www.ucl.ac.uk/%7Eucbtarl/">Andres Ruiz-Linares</a>, 
+        <a href="http://www.ucl.ac.uk/genetic-epidemiology/">Arron Hingorani</a><br>
+
+        <strong>University of Hong Kong:</strong> 
+        <a href="http://www.psychiatry.hku.hk/p_sham.html">Pak Sham</a><br>
+
+        <strong>University of Illinois at Chicago:</strong> 
+        <a href="http://www.uic.edu/sph/epi-bio/faculty-and-staff">Xiping Xu</a><br>
+
+        <strong>University of Southern Denmark:</strong> 
+        <a href="http://www.sdu.dk/staff/qtan.aspx">Qihua Tan</a><br>
+      </p>
+    </section>
   </div>
+</div>
 
-  <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('template-header').innerHTML = data;
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('template-header').innerHTML = data;
 
-        const sidebarToggle = document.getElementById('sidebarCollapse');
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
+      const sidebarToggle = document.getElementById('sidebarCollapse');
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
 
-        if (sidebarToggle && sidebar && content) {
-          sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            content.classList.toggle('active');
-            sidebarToggle.classList.toggle('collapsed');
-          });
-        }
-      });
-  </script>
+      if (sidebarToggle && sidebar && content) {
+        sidebarToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          content.classList.toggle('active');
+          sidebarToggle.classList.toggle('collapsed');
+        });
+      }
+    });
+</script>
 </body>
 </html>
 
