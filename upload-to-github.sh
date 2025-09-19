@@ -16,6 +16,7 @@ fi
 # File list — including this script itself
 FILES=(
   "name.jpg"
+  "cv.pdf"
   "index.html"
   "header.html"
   "about.html"
