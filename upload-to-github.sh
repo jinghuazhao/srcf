@@ -41,10 +41,10 @@ FILES=(
 
 # Add and commit each file individually
 for file in "${FILES[@]}"; do
-  if [ -f "$file" ]; then
+  if [ -f "$file" ] || [ -d "$file" ]; then
     echo "Adding and committing $file..."
     git add "$file"
-    git commit -m "$file"
+    git commit -m "Add/Update $file"
   else
     echo "Warning: $file not found!"
   fi
