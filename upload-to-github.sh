@@ -38,6 +38,7 @@ FILES=(
   "mrclinks.htm"
   "phpclinks.html"
   "suggests.html"
+  "software.htm"
 )
 
 # Add and commit each file individually
