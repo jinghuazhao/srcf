@@ -34,6 +34,7 @@ FILES=(
   "focus.gif"
   "ucllinks.htm"
   "kcllinks.htm"
+  "mrclinks.htm"
   "phpclinks.html"
   "suggests.html"
 )
