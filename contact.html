@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Contact – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
     <div id="template-header"></div>
-    <div id="content">
-      <section class="container mt-4">
+    <div id="content" class="container mt-4">
+      <section>
         <h1>Contact</h1>
 
         <p>
@@ -25,7 +25,8 @@
 
         <p>
           <a href="references.txt">References</a> |
-          <a href="https://scholar.google.co.uk/scholar?q=%22gap:+genetic+analysis+package%22" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://scholar.google.co.uk/scholar?q=%22gap:+genetic+analysis+package%22" target="_blank" rel="noopener">Google 
+Scholar</a>
         </p>
 
         <p>
@@ -54,7 +55,8 @@
             sidebarToggle.classList.toggle('collapsed');
           });
         }
-      });
+      })
+      .catch(err => console.error('Header load failed:', err));
   </script>
 </body>
 </html>
