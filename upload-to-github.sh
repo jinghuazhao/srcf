@@ -28,6 +28,14 @@ FILES=(
   "references.txt"
   "template.html"
   "upload-to-github.sh"   # ✅ Include this script
+  "iop"
+  "ucl"
+  "mrc"
+  "focus.gif"
+  "ucllinks.htm"
+  "kcllinks.htm"
+  "phpclinks.html"
+  "suggests.html"
 )
 
 # Add and commit each file individually
