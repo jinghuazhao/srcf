@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>About – Jing Hua Zhao</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a9d4c9e5c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
     <div id="template-header"></div>
-    <div id="content">
-      <section class="container mt-4">
+    <div id="content" class="container mt-4">
+      <section>
         <h1>About Me</h1>
         <p>
-          I am a scientist at the 
-          <a href="https://www.phpc.cam.ac.uk/staff/dr-jing-hua-zhao" target="_blank" rel="noopener">Cardiovascular Epidemiology Unit 
-(CEU)</a> and also Cambridge Cardiovascular, following positions at 
-          <a href="https://www.mrc-epid.cam.ac.uk/people" target="_blank" rel="noopener">MRC Epidemiology Unit</a>, 
-          <a href="https://www.ucl.ac.uk/" target="_blank" rel="noopener">University College London</a>, 
-          <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>, research portal, 
-          <a href="https://www.harvard.edu/" target="_blank" rel="noopener">Harvard University</a> and 
-          <a href="https://www.nhc.gov.cn/" target="_blank" rel="noopener">Ministry of Health, China</a>.
+          I am a scientist at the
+          <a href="https://www.phpc.cam.ac.uk/staff/dr-jing-hua-zhao" target="_blank" rel="noopener">
+            Cardiovascular Epidemiology Unit (CEU)
+          </a> and also Cambridge Cardiovascular, following positions at
+          <a href="https://www.mrc-epid.cam.ac.uk/people" target="_blank" rel="noopener">
+            MRC Epidemiology Unit
+          </a>,
+          <a href="https://www.ucl.ac.uk/" target="_blank" rel="noopener">
+            University College London
+          </a>,
+          <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">
+            King's College London
+          </a>, research portal,
+          <a href="https://www.harvard.edu/" target="_blank" rel="noopener">
+            Harvard University
+          </a> and
+          <a href="https://www.nhc.gov.cn/" target="_blank" rel="noopener">
+            Ministry of Health, China
+          </a>.
         </p>
         <p>
-          I have a PhD in Genetics from 
-          <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>, a master's degree from 
-          <a href="https://www.fudan.edu.cn/en" target="_blank" rel="noopener">Fudan University</a>, and a bachelor's degree from 
-          <a href="http://www.en.sdnu.edu.cn/" target="_blank" rel="noopener">Shandong University</a> in Medicine.
+          I have a PhD in Genetics from
+          <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">
+            King's College London
+          </a>, a master's degree from
+          <a href="https://www.fudan.edu.cn/en" target="_blank" rel="noopener">
+            Fudan University
+          </a>, and a bachelor's degree from
+          <a href="http://www.en.sdnu.edu.cn/" target="_blank" rel="noopener">
+            Shandong University
+          </a> in Medicine.
         </p>
         <p>
           I am an alumnus of Fushan No 1 Middle School and Dong Huang Shan Primary School.
@@ -58,7 +75,8 @@
             sidebarToggle.classList.toggle('collapsed');
           });
         }
-      });
+      })
+      .catch(err => console.error('Header load failed:', err));
   </script>
 </body>
 </html>
