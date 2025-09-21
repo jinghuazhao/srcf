@@ -26,6 +26,7 @@ FILES=(
   "reproducible.html"
   "style.css"
   "references.txt"
+  "r-genetics.htm"
   "template.html"
   "upload-to-github.sh"   # ✅ Include this script
   "iop"
